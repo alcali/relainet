@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="initial-scale=1,width=device-width" />
+
+        <link rel="stylesheet" href="css/style.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+        <script>
+            $(function(){
+                setWrapperHeight();
+
+                $(window).resize(function(){
+                    setWrapperHeight();
+                })
+            });
+
+            function setWrapperHeight(){
+                var windowHeight = $(window).innerHeight();
+
+                $('#wrapper').css({'min-height': windowHeight+'px'});
+            }
+        </script>
+
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="banner">
+                <h1>Your Life Solutions</h1>
+                <p>So you're stuck in life? What to do next? Crossroads? <br />
+                    We might just have the seamless practical solutions to your daily struggles.</p>
+            </div>
+            <div id="second-row">
+                <div class="center-container clearfix">
+                    <div id="first-to-know">
+                        <h2>Be the First to Know</h2>
+                        <span class="arrow-img">
+                            <img src="img/arrow.png" alt="">
+                        </span>
+                    </div>
+                    <div id="subscribe-form">
+                        <div id="form-control">
+                            <form action="">
+                                <div class="row clearfix">
+                                    <div class="form-fields">
+                                        <label for="#form-name">Name <span class="red-text">*</span></label> <br />
+                                        <input type="text" name="form-name" id="form-name" />
+                                    </div>
+                                    <div class="form-fields">
+                                        <label for="#form-email">Email <span class="red-text">*</span></label> <br />
+                                        <input type="text" name="form-email" id="form-email" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-fields comments">
+                                        <label for="#form-comments">Comments (optional)</label><br />
+                                        <textarea name="" id="form-comments" cols="30" rows="5"></textarea>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-fields">
+                                        <button>Get in Touch</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
